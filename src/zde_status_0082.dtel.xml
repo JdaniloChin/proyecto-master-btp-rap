@@ -3,21 +3,21 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <DD04V>
-    <ROLLNAME>ZDE_CREATEON_0082</ROLLNAME>
+    <ROLLNAME>ZDE_STATUS_0082</ROLLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
     <HEADLEN>55</HEADLEN>
     <SCRLEN1>10</SCRLEN1>
     <SCRLEN2>20</SCRLEN2>
     <SCRLEN3>40</SCRLEN3>
-    <DDTEXT>Fecha de creación de la orden</DDTEXT>
-    <REPTEXT>Fecha Creacion</REPTEXT>
-    <SCRTEXT_S>Fecha Crea</SCRTEXT_S>
-    <SCRTEXT_M>Fecha Creacion</SCRTEXT_M>
-    <SCRTEXT_L>Fecha Creacion</SCRTEXT_L>
+    <DDTEXT>Estado de la orden</DDTEXT>
+    <REPTEXT>Estado de la orden</REPTEXT>
+    <SCRTEXT_S>Estado ord</SCRTEXT_S>
+    <SCRTEXT_M>Estado orden</SCRTEXT_M>
+    <SCRTEXT_L>Estado de la orden</SCRTEXT_L>
     <DTELMASTER>E</DTELMASTER>
-    <DATATYPE>DATS</DATATYPE>
-    <LENG>000008</LENG>
-    <OUTPUTLEN>000010</OUTPUTLEN>
+    <DATATYPE>INT4</DATATYPE>
+    <LENG>000010</LENG>
+    <OUTPUTLEN>000011</OUTPUTLEN>
     <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
    </DD04V>
   </asx:values>
