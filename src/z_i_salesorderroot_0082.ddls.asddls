@@ -12,7 +12,6 @@ composition [0..*] of Z_I_SalesOrderItem_0082 as _Items
     firstname as Nombre,
     lastname as Apellido,
     country as Pais,
-    @Semantics.systemDateTime.createdAt: true
     createon as Creado,
     deliverydate as Entregado,
     orderstatus as Estado,

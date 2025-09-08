@@ -13,7 +13,6 @@ define view Z_I_SalesOrder_0082
       firstname as Nombre,
       lastname as Apellido,
       country as Pais,
-      @Semantics.systemDateTime.createdAt: true
       createon as Creado,
       deliverydate as Entregado,
       orderstatus as Estado,

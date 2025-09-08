@@ -8,7 +8,6 @@ define root view entity Z_C_SalesOrderRoot_0082 as projection on Z_I_SalesOrderR
    Nombre,
    Apellido,
    Pais,
-   @Semantics.systemDateTime.createdAt: true
    Creado,
    Entregado,
    Estado,

@@ -1,0 +1,5 @@
+@EndUserText.label: 'Sales Orders'
+define service Zsd_salesorders_0082 {
+  expose Z_C_SalesOrderRoot_0082 as Sales_orders;
+  expose Z_C_SalesOrder_0082     as Items;
+}
