@@ -1,0 +1,59 @@
+managed implementation in class zbp_i_salesorderroot_0082 unique;
+//strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for Z_I_SalesOrderRoot_0082 alias SalesOrders//alias <alias_name>
+persistent table zsoheader_0082
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+
+  // Mapeo explícito de los campos de la vista CDS a los campos de la tabla
+  mapping for zsoheader_0082
+    {
+      Id        = ID;
+      Correo    = EMAIL;
+      Nombre    = FIRSTNAME;
+      Apellido  = LASTNAME;
+      Pais      = COUNTRY;
+      Creado    = CREATEON;
+      Entregado = DELIVERYDATE;
+      Estado    = ORDERSTATUS;
+      Imagen    = IMAGEURL;
+    }
+
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) Id;
+  association _Items { create; }
+}
+
+define behavior for Z_I_SalesOrderItem_0082 alias Items//alias <alias_name>
+persistent table zsoitems_0082
+lock dependent by _Header
+authorization dependent by _Header
+//etag master <field_name>
+{
+
+  // Mapping for the dependent entity
+  mapping for zsoitems_0082
+    {
+      ID            = ID;
+      Nombre        = NAME;
+      Descripcion   = DESCRIPTION;
+      Lanzamiento   = RELEASEDATE;
+      Discontinuado = DISCONTINUEDATE;
+      Pecio         = PRICE;
+      Altura        = HEIGHT;
+      Ancho         = WIDTH;
+      Profundidad   = DEPTH;
+      Cantidad      = QUANTITY;
+      Medida        = UNITOFMEASURE;
+    }
+
+  update;
+  delete;
+  field ( readonly ) ID;
+  association _Header;
+}
