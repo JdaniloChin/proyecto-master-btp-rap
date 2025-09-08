@@ -1,6 +1,6 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Consumption Sales Orders'
-@Metadata.ignorePropagatedAnnotations: true
+@Metadata.allowExtensions: true
 define root view entity Z_C_SalesOrderRoot_0082 as projection on Z_I_SalesOrderRoot_0082
 {
    key Id,
@@ -14,5 +14,5 @@ define root view entity Z_C_SalesOrderRoot_0082 as projection on Z_I_SalesOrderR
    Estado,
    Imagen,
    /* Associations */
-   _Items 
+   _Items : redirected to Z_C_SalesOrder_0082
 }

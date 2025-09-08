@@ -1,6 +1,6 @@
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Consumption Sales Orders'
-@Metadata.ignorePropagatedAnnotations: true
+@Metadata.allowExtensions: true
 define view entity Z_C_SalesOrder_0082
   as projection on Z_I_SalesOrderItem_0082
 {
@@ -20,5 +20,5 @@ define view entity Z_C_SalesOrder_0082
       @Semantics.unitOfMeasure: true
       Medida,
       /* Associations */
-      _Header
+      _Header : redirected to parent Z_C_SalesOrderRoot_0082
 }

@@ -1,0 +1,64 @@
+@Metadata.layer: #CORE
+@Search.searchable: true
+@UI: {
+  headerInfo: {
+    typeName: 'Item',
+    typeNamePlural: 'Items',
+    title: { type: #STANDARD, value: 'ID' },
+    description: { value: 'Descripcion' }
+  }
+}
+annotate view Z_C_SalesOrder_0082 with
+{
+  // Faceta
+  @UI.facet: [
+    {
+      id: 'Detalles',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Detalles del Item',
+      position: 10
+    }
+  ]
+
+  // Campos para List Report
+  @UI.lineItem: [{ position: 10, label: 'Item ID', importance: #HIGH }]
+  @UI.identification: [{ position: 10, label: 'Item ID' }]
+  @Search.defaultSearchElement: true
+  ID;
+
+  @UI.lineItem: [{ position: 20, label: 'Nombre', importance: #HIGH }]
+  @UI.identification: [{ position: 20, label: 'Nombre' }]
+  Nombre;
+
+  @UI.lineItem: [{ position: 30, label: 'Descripción', importance: #HIGH }]
+  @UI.identification: [{ position: 30, label: 'Descripción' }]
+  Descripcion;
+
+  @UI.lineItem: [{ position: 40, label: 'Precio', importance: #MEDIUM }]
+  @UI.identification: [{ position: 40, label: 'Precio' }]
+  Pecio;
+
+  @UI.lineItem: [{ position: 50, label: 'Cantidad', importance: #MEDIUM }]
+  @UI.identification: [{ position: 50, label: 'Cantidad' }]
+  Cantidad;
+
+  @UI.lineItem: [{ position: 60, label: 'Medida', importance: #LOW }]
+  @UI.identification: [{ position: 60, label: 'Medida' }]
+  Medida;
+
+  @UI.identification: [{ position: 70, label: 'Lanzamiento' }]
+  Lanzamiento;
+
+  @UI.identification: [{ position: 80, label: 'Discontinuado' }]
+  Discontinuado;
+
+  @UI.identification: [{ position: 90, label: 'Altura' }]
+  Altura;
+
+  @UI.identification: [{ position: 100, label: 'Ancho' }]
+  Ancho;
+
+  @UI.identification: [{ position: 110, label: 'Profundidad' }]
+  Profundidad;
+}

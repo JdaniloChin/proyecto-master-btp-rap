@@ -1,0 +1,66 @@
+@Metadata.layer: #CORE
+@Search.searchable: true
+@UI: {
+  headerInfo: {
+    typeName: 'Sales Order',
+    typeNamePlural: 'Sales Orders',
+    imageUrl: 'Imagen',
+    title: { type: #STANDARD, value: 'Id' },
+    description: { value: 'Nombre' }
+  }
+}
+annotate view Z_C_SalesOrderRoot_0082 with
+{
+  // Facetas
+  @UI.facet: [
+    {
+      id: 'GeneralFacet',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Datos Generales',
+      position: 10
+    },
+    {
+      id: 'ItemsFacet',
+      purpose: #STANDARD,
+      type: #LINEITEM_REFERENCE,
+      label: 'Items',
+      position: 20,
+      targetElement: '_Items'
+    }
+  ]
+
+  // Campos para List Report
+  @UI.lineItem: [{ position: 10, label: 'Order ID', importance: #HIGH }]
+  @UI.identification: [{ position: 10, label: 'Order ID' }]
+  @Search.defaultSearchElement: true
+  Id;
+
+  @UI.lineItem: [{ position: 20, label: 'Cliente', importance: #HIGH }]
+  @UI.identification: [{ position: 20, label: 'Nombre Cliente' }]
+  Nombre;
+
+  @UI.lineItem: [{ position: 30, label: 'País', importance: #MEDIUM }]
+  @UI.identification: [{ position: 30, label: 'País' }]
+  Pais;
+
+  @UI.lineItem: [{ position: 40, label: 'Estado', importance: #LOW }]
+  @UI.identification: [{ position: 40, label: 'Estado' }]
+  Estado;
+
+  @UI.lineItem: [{ position: 50, label: 'Fecha Creación', importance: #LOW }]
+  @UI.identification: [{ position: 50, label: 'Creado' }]
+  Creado;
+
+  @UI.identification: [{ position: 60, label: 'Apellido' }]
+  Apellido;
+
+  @UI.identification: [{ position: 70, label: 'Correo' }]
+  Correo;
+
+  @UI.identification: [{ position: 80, label: 'Fecha de Entrega' }]
+  Entregado;
+
+  @UI.identification: [{ position: 90, label: 'Imagen' }]
+  Imagen;
+}
