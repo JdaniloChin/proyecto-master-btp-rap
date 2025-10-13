@@ -1,7 +1,8 @@
 managed implementation in class zbp_i_salesorderroot_0082 unique;
 //strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
 
-define behavior for Z_I_SalesOrderRoot_0082 alias SalesOrders//alias <alias_name>
+define behavior for Z_I_SalesOrderRoot_0082 alias SalesOrders
+implementation in class zbp_i_salesorder_0082 unique
 persistent table zsoheader_0082
 lock master
 authorization master ( instance )
@@ -25,6 +26,9 @@ authorization master ( instance )
   create ( authorization : global );
   update;
   delete;
+
+  field ( mandatory ) Correo;
+
   field ( readonly ) Id;
   association _Items { create; }
 }
@@ -40,6 +44,7 @@ authorization dependent by _Header
   mapping for zsoitems_0082
     {
       ID            = ID;
+      Posicion      = item_position;
       Nombre        = NAME;
       Descripcion   = DESCRIPTION;
       Lanzamiento   = RELEASEDATE;
@@ -54,6 +59,6 @@ authorization dependent by _Header
 
   update;
   delete;
-  field ( readonly ) ID;
+  field ( readonly ) ID, Posicion;
   association _Header;
 }

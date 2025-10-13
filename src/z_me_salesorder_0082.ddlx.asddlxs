@@ -26,39 +26,44 @@ annotate view Z_C_SalesOrder_0082 with
   @UI.identification: [{ position: 10, label: 'Item ID' }]
   @Search.defaultSearchElement: true
   ID;
+  
+  @UI.lineItem: [{ position: 20, label: 'Posicion Item', importance: #HIGH }]
+  @UI.identification: [{ position: 20, label: 'Item ID' }]
+  @Search.defaultSearchElement: true
+  Posicion;
 
-  @UI.lineItem: [{ position: 20, label: 'Nombre', importance: #HIGH }]
-  @UI.identification: [{ position: 20, label: 'Nombre' }]
+  @UI.lineItem: [{ position: 30, label: 'Nombre', importance: #HIGH }]
+  @UI.identification: [{ position: 30, label: 'Nombre' }]
   Nombre;
 
-  @UI.lineItem: [{ position: 30, label: 'Descripción', importance: #HIGH }]
-  @UI.identification: [{ position: 30, label: 'Descripción' }]
+  @UI.lineItem: [{ position: 40, label: 'Descripción', importance: #HIGH }]
+  @UI.identification: [{ position: 40, label: 'Descripción' }]
   Descripcion;
 
-  @UI.lineItem: [{ position: 40, label: 'Precio', importance: #MEDIUM }]
-  @UI.identification: [{ position: 40, label: 'Precio' }]
+  @UI.lineItem: [{ position: 50, label: 'Precio', importance: #MEDIUM }]
+  @UI.identification: [{ position: 50, label: 'Precio' }]
   Pecio;
 
-  @UI.lineItem: [{ position: 50, label: 'Cantidad', importance: #MEDIUM }]
-  @UI.identification: [{ position: 50, label: 'Cantidad' }]
+  @UI.lineItem: [{ position: 60, label: 'Cantidad', importance: #MEDIUM }]
+  @UI.identification: [{ position: 60, label: 'Cantidad' }]
   Cantidad;
 
-  @UI.lineItem: [{ position: 60, label: 'Medida', importance: #LOW }]
-  @UI.identification: [{ position: 60, label: 'Medida' }]
+  @UI.lineItem: [{ position: 70, label: 'Medida', importance: #LOW }]
+  @UI.identification: [{ position: 70, label: 'Medida' }]
   Medida;
 
-  @UI.identification: [{ position: 70, label: 'Lanzamiento' }]
+  @UI.identification: [{ position: 80, label: 'Lanzamiento' }]
   Lanzamiento;
 
-  @UI.identification: [{ position: 80, label: 'Discontinuado' }]
+  @UI.identification: [{ position: 90, label: 'Discontinuado' }]
   Discontinuado;
 
-  @UI.identification: [{ position: 90, label: 'Altura' }]
+  @UI.identification: [{ position: 100, label: 'Altura' }]
   Altura;
 
-  @UI.identification: [{ position: 100, label: 'Ancho' }]
+  @UI.identification: [{ position: 120, label: 'Ancho' }]
   Ancho;
 
-  @UI.identification: [{ position: 110, label: 'Profundidad' }]
+  @UI.identification: [{ position: 130, label: 'Profundidad' }]
   Profundidad;
 }
