@@ -5,6 +5,7 @@ define view entity Z_C_SalesOrder_0082
   as projection on Z_I_SalesOrderItem_0082
 {
   key ID,
+  key Posicion,
       Nombre,
       Descripcion,
       Lanzamiento,

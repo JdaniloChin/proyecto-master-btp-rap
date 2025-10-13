@@ -8,6 +8,7 @@ define view Z_I_SalesOrderItem_0082 as select from zsoitems_0082 as Items
 association to parent Z_I_SalesOrderRoot_0082 as _Header on $projection.ID = _Header.Id
 {
     key id as ID,
+    key item_position as Posicion,
     name as Nombre,
     description as Descripcion,
     releasedate as Lanzamiento,
